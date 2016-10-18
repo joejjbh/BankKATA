@@ -51,8 +51,8 @@ namespace BankKata.Tests
         public void ShouldReturnDigitsAsNumbers(string firstLineDigits, string secondLineDigits, 
                 string thirdLineDigits, int expectedAccountNumber)
         {
-            var digit = new Digit();
-            var result = digit.GetAccountNumber(firstLineDigits, secondLineDigits, thirdLineDigits);
+            var accountNumber = new AccountNumber();
+            var result = accountNumber.GetAccountNumber(firstLineDigits, secondLineDigits, thirdLineDigits);
             Assert.That(result, Is.EqualTo(expectedAccountNumber));
         }
     }

@@ -43,24 +43,8 @@ namespace BankKata.Library
                 .Select(i => str.Substring(i * chunkSize, chunkSize));
         }
 
-        public int GetAccountNumber(string firstLineDigits, string secondLineDigits, string thirdLineDigits)
-        {
-            var firstLineDigitsList = SeparateIntoSubstrings(firstLineDigits);
-            var secondLineDigitsList = SeparateIntoSubstrings(secondLineDigits);
-            var thirdLineDigitsList = SeparateIntoSubstrings(thirdLineDigits);
-            string accountNumber = "";
-
-            for (int index = 0; index < 9; index++)
-            {
-                var fullDigitAsString = firstLineDigitsList[index] + 
-                                           secondLineDigitsList[index] +
-                                           thirdLineDigitsList[index];
-                var digit = GetDigitValue(fullDigitAsString);
-                accountNumber += digit;
-            }
-
-            return int.Parse(accountNumber);
+        
         }
     }
-}
+
 
