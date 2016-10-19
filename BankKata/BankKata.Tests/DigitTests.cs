@@ -8,16 +8,16 @@ namespace BankKata.Tests
     [TestFixture]
     public class DigitTests
     {
-        [TestCase("     |  |", 1)]
-        [TestCase(" _  _||_ ", 2)]
-        [TestCase(" _  _| _|", 3)]
-        [TestCase("   |_|  |", 4)]
-        [TestCase(" _ |_  _|", 5)]
-        [TestCase(" _ |_ |_|", 6)]
-        [TestCase(" _   |  |", 7)]
-        [TestCase(" _ |_||_|", 8)]
-        [TestCase(" _ |_| _|", 9)]
-        [TestCase(" _ | | _ ", 0)]
+        [TestCase("     |  |   ", 1)]
+        [TestCase(" _  _||_    ", 2)]
+        [TestCase(" _  _| _|   ", 3)]
+        [TestCase("   |_|  |   ", 4)]
+        [TestCase(" _ |_  _|   ", 5)]
+        [TestCase(" _ |_ |_|   ", 6)]
+        [TestCase(" _   |  |   ", 7)]
+        [TestCase(" _ |_||_|   ", 8)]
+        [TestCase(" _ |_| _|   ", 9)]
+        [TestCase(" _ | | _    ", 0)]
         public void ShouldReturnPipesAndUnderScoresAsValue(string digitAsString, int expectedValue)
         {
             var digit = new Digit();
@@ -47,12 +47,13 @@ namespace BankKata.Tests
 
         [TestCase("    _  _     _  _  _  _  _ ",
                   "  | _| _||_||_ |_   ||_||_|",
-                  "  ||_  _|  | _||_|  ||_| _|", 123456789)]
+                  "  ||_  _|  | _||_|  ||_| _|",
+                  "                           ",123456789)]
         public void ShouldReturnDigitsAsNumbers(string firstLineDigits, string secondLineDigits, 
-                string thirdLineDigits, int expectedAccountNumber)
+                string thirdLineDigits, string fourthLineDigits, int expectedAccountNumber)
         {
             var accountNumber = new AccountNumber();
-            var result = accountNumber.GetAccountNumber(firstLineDigits, secondLineDigits, thirdLineDigits);
+            var result = accountNumber.GetAccountNumber(firstLineDigits, secondLineDigits, thirdLineDigits, fourthLineDigits);
             Assert.That(result, Is.EqualTo(expectedAccountNumber));
         }
     }

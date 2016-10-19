@@ -7,17 +7,17 @@ namespace BankKata.Library
     {
         private static readonly Dictionary<string, int> digitValue = new Dictionary<string, int>()
         {
-            {"     |  |", 1},
-            {" _  _||_ ", 2},
-            {" _  _| _|", 3},
-            {"   |_|  |", 4},
-            {" _ |_  _|", 5},
-            {" _ |_ |_|", 6},
-            {" _   |  |", 7},
-            {" _ |_||_|", 8},
-            {" _ |_| _|", 9},
-            {" _ | | _ ", 0},
-          };
+            {"     |  |   ", 1},
+            {" _  _||_    ", 2},
+            {" _  _| _|   ", 3},
+            {"   |_|  |   ", 4},
+            {" _ |_  _|   ", 5},
+            {" _ |_ |_|   ", 6},
+            {" _   |  |   ", 7},
+            {" _ |_||_|   ", 8},
+            {" _ |_| _|   ", 9},
+            {" _ | | _    ", 0},
+        };
 
         public int GetDigitValue(string digitAsString)
         {
@@ -39,12 +39,10 @@ namespace BankKata.Library
 
         static IEnumerable<string> Split(string str, int chunkSize)
         {
-            return Enumerable.Range(0, str.Length / chunkSize)
-                .Select(i => str.Substring(i * chunkSize, chunkSize));
-        }
-
-        
+            return Enumerable.Range(0, str.Length/chunkSize)
+                .Select(i => str.Substring(i*chunkSize, chunkSize));
         }
     }
+}
 
 
