@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ConsoleApplication1
+namespace BankKata
 {
     class Program
     {
