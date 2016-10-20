@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9001D19C-A2DA-4A71-BC95-32A718C2E0A8}</ProjectGuid>
+    <ProjectGuid>{5B3732F0-55B9-4416-B2A3-957E1FC5D751}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BankKata</RootNamespace>
@@ -53,6 +53,12 @@
     <Content Include="Data.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankKata.Library\BankKata.Library.csproj">
+      <Project>{75c26c6d-d494-4b20-86b7-e95b371836f4}</Project>
+      <Name>BankKata.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountNumber.cs" />
+    <Compile Include="CollectionOfDigitsAsLineStrings.cs" />
     <Compile Include="Digit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

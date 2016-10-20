@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
 using BankKata.Library;
 using NUnit.Framework;
 
@@ -53,8 +52,11 @@ namespace BankKata.Tests
                 string thirdLineDigits, string fourthLineDigits, int expectedAccountNumber)
         {
             var accountNumber = new AccountNumber();
-            var result = accountNumber.GetAccountNumber(firstLineDigits, secondLineDigits, thirdLineDigits, fourthLineDigits);
+            var result = accountNumber.GetAccountNumbers(firstLineDigits, secondLineDigits, thirdLineDigits, fourthLineDigits);
             Assert.That(result, Is.EqualTo(expectedAccountNumber));
         }
+
+        [Test]
+        public void  
     }
 }

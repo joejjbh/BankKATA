@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankKata.Library", "BankKat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankKata.Tests", "BankKata.Tests\BankKata.Tests.csproj", "{0B54E790-9503-4338-8E1B-2656DF54B1DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankKata", "ConsoleApplication2\BankKata.csproj", "{9001D19C-A2DA-4A71-BC95-32A718C2E0A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankKata", "BankKata\BankKata.csproj", "{5B3732F0-55B9-4416-B2A3-957E1FC5D751}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{0B54E790-9503-4338-8E1B-2656DF54B1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B54E790-9503-4338-8E1B-2656DF54B1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B54E790-9503-4338-8E1B-2656DF54B1DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9001D19C-A2DA-4A71-BC95-32A718C2E0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9001D19C-A2DA-4A71-BC95-32A718C2E0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9001D19C-A2DA-4A71-BC95-32A718C2E0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9001D19C-A2DA-4A71-BC95-32A718C2E0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B3732F0-55B9-4416-B2A3-957E1FC5D751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3732F0-55B9-4416-B2A3-957E1FC5D751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3732F0-55B9-4416-B2A3-957E1FC5D751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3732F0-55B9-4416-B2A3-957E1FC5D751}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
