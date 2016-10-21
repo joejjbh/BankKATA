@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading;
+using System.Runtime.InteropServices;
 using BankKata.Library;
 
 namespace BankKata
@@ -16,6 +15,9 @@ namespace BankKata
             var fileName = Path.Combine(directory.FullName, "Data.txt");
             var fileContents = ReadFile(fileName);
             Console.WriteLine(fileContents);
+
+            var fileName2 = Path.Combine(directory.FullName, "accountNumbers.txt");
+            WriteToFile(fileName2);
         }
 
         public static CollectionOfDigitsAsLineStrings ReadFile(string fileName)
@@ -38,6 +40,20 @@ namespace BankKata
                     }
                 }
                 return collection;
+            }
+        }
+
+        public static StreamWriter WriteToFile(string fileName2)
+        {
+            var accountNumbers = new AccountNumbers();
+            var theAccountNumbers = accountNumbers.GetAccountNumbers();
+            using (var writer = new StreamWriter(fileName2))
+            {
+                foreach (int acountNumber in theAccountNumbers)
+                {
+                        writer.WriteLine(acountNumber);
+                }
+                return writer;
             }
         }
 

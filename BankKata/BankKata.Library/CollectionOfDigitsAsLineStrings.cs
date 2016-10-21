@@ -15,7 +15,5 @@ namespace BankKata.Library
         {
             _collection.Add(lines);
         }
-
-
     }
 }
